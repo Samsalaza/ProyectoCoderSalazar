@@ -19,7 +19,7 @@ def signup (request):
 
             user_Form=Users(user_name=user_name, email=email, password=password)
             user_Form.save()
-            return render (request, "signupSuccessful.html", {"message":"El Usuario ha sido registrado correctamente"})
+            return render (request, "signupSuccessful.html", {"message":"El Usuario ha sido registrado correctamente en la base de datos"})
 
     else:
         formulario=signupForm
