@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block container %}
+<h1>RESULTADOS DE LUGARES ENCONTRADOS</h1>
+
+{% for place in places  %}
+
+<p>{{ place }}</p>
+
+{% endfor %}
+
+{% endblock  %}
+
+
+

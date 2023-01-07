@@ -13,4 +13,12 @@ class Blog(models.Model):
     def __str__(self) -> str:
          return self.titulo + " " +self.autor
 
-        
+
+class Nuevo_sitio (models.Model):
+    nombre_locacion = models.CharField( max_length=50)
+    direccion= models.CharField( max_length=50)
+    comentario = RichTextField(blank=True,null=True)
+
+    def __str__(self):
+        return self.nombre_locacion + "-" +self.direccion
+    

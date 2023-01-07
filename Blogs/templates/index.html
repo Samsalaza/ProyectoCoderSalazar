@@ -87,13 +87,11 @@
                       </li>
 
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nuevos lugares <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Our People</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="{% url 'newPlaceForm' %}">Agrega tu lugar</a></li>
+                            <li><a href="{% url 'searchPlace' %}">BUSCAR LUGARES</a></li>
+                            <li><a href="{% url 'placesList' %}">NUESTROS LUGARES</a></li>
                           </ul>
                       </li>
               
@@ -187,7 +185,7 @@
         <div class="row align-items-center">
           <div class="col-md-8 text-center text-md-left">
               <div class="call-to-action-text">
-                <h3 class="action-title">We understand your needs on construction</h3>
+                <h3 class="action-title">VirtualResto</h3>
               </div>
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">

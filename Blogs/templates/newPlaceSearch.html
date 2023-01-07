@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block container %}
+<h1>ENCUENTRA UN LUGAR</h1>
+
+<div class="{% static 'form-group' %}"> 
+    <form action="{% url 'searchPlace' %}" method="GET">
+
+
+        <table>
+            <input type="text" name="nombre_locacion" id="nombre_locacion">
+            <input type="submit" value="Buscar">
+        </table>
+    </form>
+</div>
+
+{% endblock  %}
+
+{% block message %}
+
+{% endblock  %}
+
