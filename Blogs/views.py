@@ -43,7 +43,8 @@ def newPlaceForm (request):
             newPlace_Form=Nuevo_sitio(nombre_locacion=nombre_locacion, direccion=direccion,comentario=comentario)
             newPlace_Form.save()
             return render (request, "newPlaceSuccessful.html", {"message":"Se ha agregado un nuevo lugar por descubrir"})
-
+        else:
+            return render(request, "index.html")
     else:
         form=NuevoLugarForm
 
@@ -53,13 +54,17 @@ def newPlaceSearch (request):
     return render(request, "newPlaceSearch.html")
 
 def searchPlace (request):
-    if request.GET["nombre_locacion"]:
+    if ("nombre_locacion") in request.GET:
         nombre_locacion=request.GET["nombre_locacion"]
-        places=Nuevo_sitio.objects.filter(nombre_locacion_icontains=nombre_locacion)
-        return render(request, "searcResult.html", {"places":places})
+        places=Nuevo_sitio.objects.filter(nombre_locacion=nombre_locacion)
+        return render(request, "searchResult.html", {"places":places})
     else:
         return render(request, "newPlaceSearch.html", {"message": "Ingrese un nombre de lugar para  buscar"})
 
 def placesList (request):
     places=Nuevo_sitio.objects.all()
     return render(request, "placesList.html", {"places":places})
+
+def placeDetails (request, id):
+    place=Nuevo_sitio.objects.get(id=id)
+    return render (request, "placeDetails.html", {"place":place})

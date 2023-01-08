@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block container %}
+<h1>LISTADO DE LUGARES</h1>
+
+<table style="width: 100%; background-color: rgb(246, 242, 242)">
+    <tr>
+        <th scope="col">Nombre del lugar</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Comentarios</th>
+    </tr>
+     <tr>
+         <td>{{ place.nombre_locacion }}</td>
+         <td>{{ place.direccion }}</td>
+         <td>{{ place.comentario }}</td>
+     </tr>
+ </table>
+
+
+{% endblock  %}
+
+
+

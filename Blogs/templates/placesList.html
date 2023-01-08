@@ -9,7 +9,7 @@
 
 <ul>
     {% for places in places  %}
-   <li> {{ places.nombre_locacion }} - {{ places.direccion}} </li>
+   <li> {{ places.nombre_locacion }} - {{ places.direccion}}  <a href="{% url 'placeDetails' places.id %}" >...Leer más</a> </li>
 
     {% endfor %}
 

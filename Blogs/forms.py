@@ -2,6 +2,8 @@ from django import forms
 from Blogs.models import Blog, Nuevo_sitio
 from ckeditor.fields import RichTextField
 from django.contrib.admin import widgets
+from ckeditor_uploader.fields import RichTextUploadingFormField
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
 class BlogForm(forms.ModelForm):
@@ -10,7 +12,7 @@ class BlogForm(forms.ModelForm):
     autor = forms.CharField(max_length=50)
     fecha_publicacion = forms.DateField()
     imagen = forms.ImageField()
-    opinion = RichTextField()
+    opinion = RichTextUploadingFormField()
 
     class Meta:
         model = Blog

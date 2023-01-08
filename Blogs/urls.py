@@ -8,4 +8,5 @@ urlpatterns = [
     path('searchPlace/', newPlaceSearch, name="newPlaceSearch"),
     path('search/', searchPlace, name="searchPlace"),
     path('placesList/', placesList, name="placesList"),
+    path('placesDetail/<id>', placeDetails , name="placeDetails"),
 ]
