@@ -40,9 +40,9 @@ def leerMensaje(request):
 def enviadoMensaje(request):
     usuario = request.user
     herram = Mensaje.objects.filter(enviar = usuario)
-    return render(request, "enviadoMensaje.html", {"mensajes": herram, "imagen": getAvatar(request)})
+    return render(request, "enviandoMensaje.html", {"mensajes": herram, "imagen": getAvatar(request)})
 
 
 @login_required
-def mensajeUsuarios(request):
+def mensajeUsuarios (request):
     return render(request, 'mensajeUsuarios.html',{'users': User.objects.exclude(username=request.user.username), "imagen": getAvatar(request)})
