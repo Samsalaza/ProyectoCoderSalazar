@@ -6,11 +6,12 @@
 <h1>ESCRIBE UNA RESEÑA SOBRE TU RESTAURANT FAVORITO</h1>
 
 <div class="{% static 'form-group' %}"> 
-    <form action="{% url 'blogForm' %}" method="POST">  {% csrf_token %}
+    <form action="{% url 'blogForm' %}" method="POST" enctype="multipart/form-data">  {% csrf_token %}
 
 
         <table>
-        {{ form.as_table }}
+        {{ form.media|safe }}
+        {{ form.as_table|safe }}
         </table>
             <p> </p> 
             <p> <input type="submit" value="REGISTRAR"></p> 

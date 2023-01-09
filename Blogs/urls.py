@@ -1,5 +1,7 @@
 from django.urls import path
 from Blogs.views import *
+from django.contrib.auth.views import LogoutView
+
 
 urlpatterns = [
     path('', index),

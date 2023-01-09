@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block container %}
+<h1>AGREGAR AVATAR PARA:  {{ usuario.username }}</h1>
+
+<div class="{% static 'form-group' %}"> 
+    <form action="{% url 'addAvatar' %}" method="POST" enctype="multipart/form-data">  {% csrf_token %}
+
+
+        <table>
+        {{ form.as_table }}
+        </table>
+            <p> </p> 
+            <p> <input type="submit" value="Agregar Avatar"></p> 
+    </form>
+</div>
+
+{% endblock  %}
+
+{% block message %}
+
+{% endblock  %}
+

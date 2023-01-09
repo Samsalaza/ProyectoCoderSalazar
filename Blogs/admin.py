@@ -5,3 +5,5 @@ from .models import Blog
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display = ['id','autor','titulo']
+
+##admin.site.register(Blog)
