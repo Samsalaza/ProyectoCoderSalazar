@@ -8,7 +8,7 @@ class Blog(models.Model):
     titulo = models.CharField(max_length=50)
     nombre_locacion = models.CharField(max_length=50)
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
-    fecha_publicacion = models.DateField(auto_now=False, auto_now_add=False)
+    fecha_publicacion = models.DateTimeField(('XYZ DateTime'))
     imagen = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None, blank=True)
     opinion = RichTextUploadingField()
 

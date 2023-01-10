@@ -11,4 +11,9 @@ urlpatterns = [
     path('search/', searchPlace, name="searchPlace"),
     path('placesList/', placesList, name="placesList"),
     path('placesDetail/<id>', placeDetails , name="placeDetails"),
+    path('allBlogs/', allBlogs , name="allBlogs"),
+    path('blog/<id>', blogPost , name="blogPost"),
+    path('editBlog/<id>', editBlog , name="editBlog"),
+    path('userPost', userPosts, name="userPosts"),
+    path('deletePost/<id>', deletePost, name="deletePost"),
 ]

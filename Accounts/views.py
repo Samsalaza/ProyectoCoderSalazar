@@ -50,6 +50,12 @@ def login_request (request):
         form=AuthenticationForm()
         return render (request,"login.html", {"form": form})
 
+@ login_required
+def userLogout(request):
+    logout(request)
+    return render(request, "logoutsuccessful.html", {"message": "Ha cerrado sesion exitosamente!", "imagen": getAvatar(request)})
+
+
 
 @login_required
 def editProfile(request):

@@ -10,6 +10,8 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
         fields = ['titulo', 'nombre_locacion', 'autor','fecha_publicacion','imagen','opinion']
+        
+    
 
 class NuevoLugarForm (forms.ModelForm):
     nombre_locacion = forms.CharField( max_length=50)
