@@ -8,12 +8,12 @@ class Blog(models.Model):
     titulo = models.CharField(max_length=50)
     nombre_locacion = models.CharField(max_length=50)
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
-    fecha_publicacion = models.DateTimeField(('XYZ DateTime'))
+    fecha_publicacion = models.DateField('XYZ Date')
     imagen = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None, blank=True)
     opinion = RichTextUploadingField()
 
     def __str__(self) -> str:
-         return self.titulo + " " +self.autor
+         return self.titulo
 
 
 class Nuevo_sitio (models.Model):

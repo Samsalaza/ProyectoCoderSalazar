@@ -1,4 +1,4 @@
-{% extends 'padre.html' %}
+{% extends 'root.html' %}
 
 {% load static %}
 
@@ -6,8 +6,8 @@
 
 <section class="{% static 'call-to-action-box no-padding' %}">
     <div class="{% static 'banner-carousel banner-carousel-1 mb-0' %}">
-      <div class="banner-carousel-item" style="background-image:url({% static 'images/slider-main/allblogs.jpg' %})">
-        <div class="slider-content">
+      <div class="{% static 'banner-carousel-item' %}" style="background-image:url({% static 'images/slider-main/allblogs.jpg' %})">
+        <div class="{% static 'slider-content' %}">
             <div class="container">
               <div class="row align-items-center h-100">
                   <div class="col-md-12 text-center">

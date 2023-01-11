@@ -16,4 +16,5 @@ urlpatterns = [
     path('editBlog/<id>', editBlog , name="editBlog"),
     path('userPost', userPosts, name="userPosts"),
     path('deletePost/<id>', deletePost, name="deletePost"),
+    path('about/', aboutMe, name="aboutMe"),
 ]

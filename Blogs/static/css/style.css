@@ -1216,7 +1216,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 /*-- Main slide --*/
 .banner-carousel .banner-carousel-item {
-  height: 700px;
+  height: 600px;
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
@@ -1501,7 +1501,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* Action style box */
 .call-to-action-box {
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 .call-to-action-box .action-style-box {

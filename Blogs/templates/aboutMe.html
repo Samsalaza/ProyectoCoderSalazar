@@ -1,0 +1,55 @@
+{% extends 'root.html' %}
+
+{% load static %}
+
+{% block header %}
+
+    <header class="masthead" style="background-image: url('../static/assets/img/about-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1 style="color: white; text-align: center;">Breve reseña</h1>
+                        <h5 class="subheading" style="color: white; text-align: center;">Sobre el autor.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock  %}
+
+
+
+{% block container %}
+
+    <!-- Main Content-->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <br>
+                    <div>
+                        <h3>Samuel Eduardo Salazar Martinez</h3>
+                        <p>Me llamo Samuel, y soy ingeniero químico. Inicié en el mundo de la programación como parte de un curso
+                            de nuevos profesionales,en el cual estuve trabajando durante dos años principalmente con java. Luego realicé
+                            funciones en la manufactura cerca de 5 años, y recientemente volvé al mundo IT trabajando como arquitecto de solución MES 
+                            en Kimberly Klrak Argentina, programando en SQL
+                            El proyecto lo denominé Virtual Resto y se trata sobre un blog de posteo de experiencias culinarias en el cual sus usuarios pueden
+                            revisar las reseñas e interactuar con otras personas de la comunidad. 
+                        </p>
+                        
+                        <img loading="lazy" src="{% static 'images/perfil.jpg' %}" alt="Constra" width="200">
+                    </div>
+                    <br> 
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock  %}
+
+{% block message %}
+
+{% endblock  %}
+

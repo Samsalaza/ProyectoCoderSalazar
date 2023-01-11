@@ -83,10 +83,11 @@ def blogPost (request, id):
     readBlog = Blog.objects.get(id = id)
     return render(request, "blogPost.html", {"readBlog" : readBlog, "imagen": getAvatar(request)})
 
+@login_required
 def editBlog (request, id):
-    user_name = request.user.get_full_name()
+    user_name = request.user.id
     blog_edit = Blog.objects.get(id = id)
-    if user_name == blog_edit.autor or request.user.is_superuser:        
+    if user_name == blog_edit.autor.id or request.user.is_superuser:        
         if request.method == "POST":
             formulario = BlogForm(request.POST, request.FILES)
             if formulario.is_valid():
@@ -118,7 +119,7 @@ def editBlog (request, id):
 def deletePost(request, id):
     user_name = request.user.id
     blog_delete = Blog.objects.get(id=id)
-    if user_name == blog_delete.autor or request.user.is_superuser:      # Validar que puedas eliminar tus propios posts
+    if user_name == blog_delete.autor.id or request.user.is_superuser:      # Validar que puedas eliminar tus propios posts
         blog_delete.delete()
         return render(request, "blogEditSuccessful.html", {"message": "El post ha sido eliminado exitosamente!"})
     else:
@@ -171,3 +172,6 @@ def placesList (request):
 def placeDetails (request, id):
     place=Nuevo_sitio.objects.get(id=id)
     return render (request, "placeDetails.html", {"place":place})
+
+def aboutMe (request):
+    return render (request, "aboutMe.html", {"imagen": getAvatar(request)})
